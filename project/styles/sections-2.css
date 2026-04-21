@@ -1,0 +1,255 @@
+/* Impact ------------------------------------------------- */
+.impact__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  border-top: 1px solid color-mix(in oklch, var(--ink) 14%, transparent);
+  border-bottom: 1px solid color-mix(in oklch, var(--ink) 14%, transparent);
+}
+@media (min-width: 900px) {
+  .impact__grid { grid-template-columns: repeat(4, 1fr); }
+}
+.stat {
+  padding: 44px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+}
+.stat + .stat {
+  border-left: 1px solid color-mix(in oklch, var(--ink) 14%, transparent);
+}
+@media (max-width: 899px) {
+  .stat:nth-child(odd) { border-left: 0; }
+  .stat:nth-child(n+3) { border-top: 1px solid color-mix(in oklch, var(--ink) 14%, transparent); }
+}
+.stat__num {
+  font-family: var(--font-display);
+  font-size: clamp(64px, 9vw, 140px);
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  color: var(--red);
+}
+.stat__rule {
+  width: 32px;
+  height: 2px;
+  background: var(--ink);
+}
+.stat__label {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+}
+.stat__sub {
+  color: var(--muted);
+}
+
+.impact__quote {
+  margin-top: 80px;
+  max-width: 32ch;
+}
+.impact__quote blockquote {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3.4vw, 48px);
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  margin: 0;
+  position: relative;
+}
+.impact__quote blockquote em { color: var(--red); font-style: italic; }
+.impact__quote-mark {
+  color: var(--red);
+  font-size: 1.4em;
+  line-height: 0.8;
+  vertical-align: -0.1em;
+  margin-right: 6px;
+}
+
+/* Team --------------------------------------------------- */
+.team__head {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid color-mix(in oklch, var(--cream) 12%, transparent);
+  margin-bottom: 60px;
+}
+@media (min-width: 900px) {
+  .team__head {
+    grid-template-columns: auto 1fr auto;
+    align-items: end;
+    gap: 48px;
+  }
+}
+.team__title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(40px, 5vw, 72px);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+.team__title em { font-style: italic; color: var(--red-bright); }
+.team__lede {
+  max-width: 38ch;
+  color: color-mix(in oklch, var(--cream) 75%, transparent);
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.team__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px 24px;
+}
+@media (min-width: 700px) { .team__grid { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 1100px) { .team__grid { grid-template-columns: repeat(6, 1fr); } }
+
+.team__card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.team__portrait {
+  aspect-ratio: 3 / 4;
+  background: var(--ink-2);
+  border: 1px solid color-mix(in oklch, var(--cream) 10%, transparent);
+  overflow: hidden;
+  position: relative;
+  transition: border-color .3s var(--ease);
+}
+.team__card:hover .team__portrait { border-color: var(--red-bright); }
+.team__portrait-inner {
+  position: absolute; inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+  background:
+    repeating-linear-gradient(
+      45deg,
+      color-mix(in oklch, var(--cream) 3%, transparent) 0 10px,
+      transparent 10px 20px
+    );
+}
+.team__initials {
+  font-family: var(--font-display);
+  font-size: 48px;
+  color: color-mix(in oklch, var(--cream) 40%, transparent);
+  letter-spacing: -0.02em;
+}
+.team__portrait-label {
+  color: color-mix(in oklch, var(--cream) 40%, transparent);
+  font-size: 9.5px;
+}
+.team__name {
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+.team__role {
+  color: var(--red-bright);
+  font-size: 10.5px;
+}
+.team__bio {
+  font-size: 13px;
+  line-height: 1.5;
+  color: color-mix(in oklch, var(--cream) 65%, transparent);
+}
+
+.team__note {
+  margin-top: 48px;
+  color: color-mix(in oklch, var(--cream) 50%, transparent);
+  text-align: center;
+}
+
+/* Careers ------------------------------------------------ */
+.careers__list {
+  border-top: 1px solid color-mix(in oklch, var(--ink) 14%, transparent);
+  margin-top: 24px;
+}
+.role {
+  display: grid;
+  grid-template-columns: 60px 2fr 1fr 1fr 40px;
+  gap: 24px;
+  align-items: center;
+  padding: 28px 0;
+  border-bottom: 1px solid color-mix(in oklch, var(--ink) 14%, transparent);
+  transition: padding .3s var(--ease), background .3s var(--ease), color .3s var(--ease);
+  position: relative;
+  overflow: hidden;
+}
+.role::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0;
+  width: 0; height: 100%;
+  background: var(--red);
+  transition: width .4s var(--ease);
+  z-index: -1;
+}
+.role:hover::before { width: 100%; }
+.role:hover { color: var(--cream); padding-left: 20px; padding-right: 20px; }
+.role__n { color: var(--red); transition: color .3s var(--ease); }
+.role:hover .role__n { color: color-mix(in oklch, var(--cream) 80%, transparent); }
+.role__title {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 2.6vw, 36px);
+  letter-spacing: -0.015em;
+  line-height: 1;
+}
+.role__loc, .role__type {
+  color: color-mix(in oklch, var(--ink) 60%, transparent);
+  transition: color .3s var(--ease);
+}
+.role:hover .role__loc, .role:hover .role__type {
+  color: color-mix(in oklch, var(--cream) 80%, transparent);
+}
+.role__arrow {
+  color: var(--red);
+  transition: color .3s var(--ease), transform .3s var(--ease);
+}
+.role:hover .role__arrow { color: var(--cream); transform: translate(4px, -4px); }
+
+@media (max-width: 900px) {
+  .role { grid-template-columns: 40px 1fr auto; gap: 16px; padding: 24px 0; }
+  .role__loc, .role__type { display: none; }
+}
+
+.careers__spont {
+  margin-top: 80px;
+}
+.careers__spont-inner {
+  background: var(--ink);
+  color: var(--cream);
+  padding: clamp(40px, 5vw, 72px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.careers__spont-inner::before {
+  content: '';
+  position: absolute;
+  right: -120px; top: -120px;
+  width: 320px; height: 320px;
+  background: var(--red);
+  border-radius: 50%;
+  filter: blur(0);
+  opacity: .4;
+}
+.careers__spont-kicker {
+  color: var(--red-bright);
+}
+.careers__spont-title {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4vw, 56px);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  max-width: 18ch;
+  position: relative;
+}
+.careers__spont .btn { position: relative; }

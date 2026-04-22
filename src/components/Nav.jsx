@@ -23,10 +23,7 @@ const Nav = () => {
     <nav className={`nav ${scrolled ? 'nav--scrolled' : ''}`}>
       <a href="#top" className="nav__brand" aria-label="Apalis home">
         <span className="nav__mark">
-          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
-            <path d="M2 22 L12 2 L22 22 Z" fill="none" stroke="currentColor" strokeWidth="2" strokeLinejoin="round"/>
-            <path d="M7 16 H17" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-          </svg>
+          <img src="/bird-logo.png" alt="" aria-hidden="true" width="32" height="32" style={{objectFit:'contain', mixBlendMode:'screen'}} />
         </span>
         <span className="nav__word">Apalis</span>
         <span className="nav__locale">MW</span>

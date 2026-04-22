@@ -19,8 +19,10 @@ const SOCIAL_ICONS = {
     </svg>
   ),
   Instagram: (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path fill="currentColor" d="M12 2.2c3.2 0 3.58.012 4.85.07 1.17.054 1.8.25 2.22.415.56.217.96.477 1.38.896.42.42.68.82.9 1.38.164.42.36 1.05.413 2.22.058 1.27.07 1.65.07 4.85s-.012 3.58-.07 4.85c-.054 1.17-.25 1.8-.414 2.22-.218.56-.478.96-.897 1.38-.42.42-.82.68-1.38.9-.42.164-1.05.36-2.22.413-1.27.058-1.65.07-4.85.07s-3.58-.012-4.85-.07c-1.17-.054-1.8-.25-2.22-.414-.56-.218-.96-.478-1.38-.897-.42-.42-.68-.82-.9-1.38-.164-.42-.36-1.05-.413-2.22C2.212 15.58 2.2 15.2 2.2 12s.012-3.58.07-4.85c.054-1.17.25-1.8.415-2.22.217-.56.477-.96.896-1.38.42-.42.82-.68 1.38-.9.42-.164 1.05-.36 2.22-.413C8.42 2.212 8.8 2.2 12 2.2zm0 2.16c-3.14 0-3.51.012-4.75.068-1.06.05-1.64.224-2.02.372-.51.2-.87.436-1.25.818-.38.38-.618.74-.816 1.25-.148.38-.322.96-.372 2.02-.057 1.24-.068 1.61-.068 4.75s.011 3.51.068 4.75c.05 1.06.224 1.64.372 2.02.198.51.436.87.818 1.25.38.38.74.618 1.25.816.38.148.96.322 2.02.372 1.24.057 1.61.068 4.75.068s3.51-.011 4.75-.068c1.06-.05 1.64-.224 2.02-.372.51-.198.87-.436 1.25-.818.38-.38.62-.74.818-1.25.148-.38.322-.96.372-2.02.057-1.24.068-1.61.068-4.75s-.011-3.51-.068-4.75c-.05-1.06-.224-1.64-.372-2.02-.198-.51-.436-.87-.818-1.25-.38-.38-.74-.618-1.25-.816-.38-.148-.96-.322-2.02-.372-1.24-.056-1.61-.068-4.75-.068zm0 3.68a3.96 3.96 0 1 1 0 7.92 3.96 3.96 0 0 1 0-7.92zm0 2.16a1.8 1.8 0 1 0 0 3.6 1.8 1.8 0 0 0 0-3.6zm5.04-2.4a.93.93 0 1 1 0 1.86.93.93 0 0 1 0-1.86z"/>
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <rect x="2" y="2" width="20" height="20" rx="5.5" ry="5.5" stroke="currentColor" strokeWidth="1.75" fill="none"/>
+      <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="1.75" fill="none"/>
+      <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
     </svg>
   ),
 };
@@ -50,7 +52,7 @@ const Contact = () => (
         </div>
         <div className="contact__block">
           <div className="mono contact__k">— HQ</div>
-          <div className="contact__v">Blantyre, Malawi</div>
+          <div className="contact__v">Lilongwe, Malawi</div>
         </div>
         <div className="contact__block">
           <div className="mono contact__k">— ALSO</div>
@@ -59,7 +61,7 @@ const Contact = () => (
       </div>
 
       <div className="contact__cta">
-        <a href="mailto:hello@apalis.io" className="big-cta">
+        <a href="mailto:inquiries@apalis.io" className="big-cta">
           <span>Start a project</span>
           <svg viewBox="0 0 24 24" width="32" height="32"><path d="M5 19 L19 5 M9 5 H19 V15" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round"/></svg>
         </a>
@@ -69,10 +71,7 @@ const Contact = () => (
     <footer className="footer">
       <div className="footer__inner">
         <div className="footer__brand">
-          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-            <path d="M2 22 L12 2 L22 22 Z" fill="none" stroke="currentColor" strokeWidth="2" strokeLinejoin="round"/>
-            <path d="M7 16 H17" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-          </svg>
+          <img src="/bird-logo.png" alt="" aria-hidden="true" width="28" height="28" style={{objectFit:'contain', mixBlendMode:'screen'}} />
           <span>Apalis</span>
         </div>
         <div className="footer__links">

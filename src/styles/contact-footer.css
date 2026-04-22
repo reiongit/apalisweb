@@ -99,19 +99,25 @@ a.contact__v:hover { color: var(--cream); text-decoration: underline; text-under
 .footer__links a:hover { opacity: 1; }
 .footer__socials {
   display: flex;
-  gap: 16px;
+  gap: 12px;
   justify-self: end;
 }
 .footer__social {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 28px;
-  height: 28px;
-  opacity: .7;
-  transition: opacity .2s var(--ease);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid color-mix(in oklch, var(--cream) 25%, transparent);
+  color: color-mix(in oklch, var(--cream) 70%, transparent);
+  transition: background .2s var(--ease), border-color .2s var(--ease), color .2s var(--ease);
 }
-.footer__social:hover { opacity: 1; }
+.footer__social:hover {
+  background: color-mix(in oklch, var(--cream) 12%, transparent);
+  border-color: color-mix(in oklch, var(--cream) 60%, transparent);
+  color: var(--cream);
+}
 .footer__social svg { width: 18px; height: 18px; }
 .footer__meta {
   display: flex;

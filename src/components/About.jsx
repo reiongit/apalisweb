@@ -41,7 +41,7 @@ const About = () => (
             {[
               ['Founded', '2017'],
               ['HQ', 'Lilongwe, MW'],
-              ['Engagements', 'MW / UK / RSA'],
+              ['Engagements', 'MW / UK / SSA'],
               ['Sectors', 'Public & Private'],
             ].map(([k, v], i) => (
               <Reveal delay={480 + i * 80} key={k} className="fact">

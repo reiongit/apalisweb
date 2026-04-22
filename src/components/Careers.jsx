@@ -24,7 +24,7 @@ const Careers = () => (
       <div className="careers__list">
         {ROLES.map((r, i) => (
           <Reveal delay={i * 60} key={r.title}>
-            <a href="#contact" className="role">
+            <a href="mailto:careers@apalis.io" className="role">
               <span className="role__n mono">0{i + 1}</span>
               <span className="role__title">{r.title}</span>
               <span className="role__loc mono">{r.loc}</span>

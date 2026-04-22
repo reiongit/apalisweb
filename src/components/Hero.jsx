@@ -3,7 +3,6 @@ import { useRef, useState, useEffect } from 'react';
 const Hero = () => {
   const heroRef = useRef(null);
   const [time, setTime] = useState('');
-  const [cursorEnabled, setCursorEnabled] = useState(true);
 
   useEffect(() => {
     const fmt = () => {
@@ -24,16 +23,6 @@ const Hero = () => {
   }, []);
 
   useEffect(() => {
-    const check = () => {
-      setCursorEnabled(window.__APALIS_TWEAKS?.cursorFollow !== false);
-    };
-    check();
-    window.addEventListener('tweaks-updated', check);
-    return () => window.removeEventListener('tweaks-updated', check);
-  }, []);
-
-  useEffect(() => {
-    if (!cursorEnabled) return;
     const el = heroRef.current;
     if (!el) return;
     const dot = el.querySelector('.hero__cursor');
@@ -61,24 +50,20 @@ const Hero = () => {
       el.removeEventListener('mousemove', onMove);
       el.removeEventListener('mouseleave', onLeave);
     };
-  }, [cursorEnabled]);
+  }, []);
 
   return (
     <header id="top" className="hero" ref={heroRef}>
       <div className="hero__grid" aria-hidden="true" />
-      {cursorEnabled && (
-        <>
-          <div className="hero__cursor-ring" aria-hidden="true" />
-          <div className="hero__cursor" aria-hidden="true" />
-        </>
-      )}
+      <div className="hero__cursor-ring" aria-hidden="true" />
+      <div className="hero__cursor" aria-hidden="true" />
 
       <div className="hero__topbar">
         <div className="hero__topbar-left">
           <span className="pill pill--live"><span className="pill__dot" /> Open for 2026 engagements</span>
         </div>
         <div className="hero__topbar-right">
-          <span className="mono">Blantyre, MW</span>
+          <span className="mono">Lilongwe, MW</span>
           <span className="mono">—</span>
           <span className="mono">{time || '—'} CAT</span>
         </div>

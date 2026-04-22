@@ -7,7 +7,6 @@ import Impact from './components/Impact';
 import Team from './components/Team';
 import Careers from './components/Careers';
 import Contact from './components/Contact';
-import Tweaks from './components/Tweaks';
 
 const App = () => (
   <>
@@ -22,7 +21,6 @@ const App = () => (
       <Careers />
       <Contact />
     </main>
-    <Tweaks />
   </>
 );
 

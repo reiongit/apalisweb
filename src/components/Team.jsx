@@ -1,21 +1,31 @@
 import { Reveal, Meta } from './shared';
 
+// To add a photo: drop a JPG into public/team/ and set `photo` to its filename.
 const TEAM = [
-  { name: 'Member One', role: 'Principal Engineer', bio: 'Platforms, data, cloud architecture.', initials: 'M1' },
-  { name: 'Member Two', role: 'Research & Evaluation Lead', bio: 'Mixed methods, policy analysis.', initials: 'M2' },
-  { name: 'Member Three', role: 'Design Lead', bio: 'User research, product design.', initials: 'M3' },
-  { name: 'Member Four', role: 'Strategy Lead', bio: 'Digital strategy, advocacy.', initials: 'M4' },
-  { name: 'Member Five', role: 'Software Engineer', bio: 'Web platforms, BI tooling.', initials: 'M5' },
-  { name: 'Member Six', role: 'Capacity Lead', bio: 'Training, facilitation.', initials: 'M6' },
+  { name: 'John Matekenya', role: 'Managing Director & Lead Data Scientist', bio: 'Platforms, data, cloud architecture.', initials: 'JP', photo: 'john-matekenya.jpg' },
+  { name: 'Nomsa Nungu', role: 'Research & Evaluation Lead', bio: 'Mixed methods, policy analysis.', initials: 'M2', photo: 'nomsa-nungu.png' },
+  { name: 'Reiwell Matekenya', role: 'Business Development Lead', bio: 'User research, product design.', initials: 'M3', photo: 'reiwell-matekenya.jpg' },
+  { name: 'Gracious Chadeleka', role: 'Sales & Marketing Officer', bio: 'Digital strategy, advocacy.', initials: 'M4', photo: 'gracious-chadeleka.jpg' },
+   { name: 'Dumisani Kaiya', role: 'Software Engineer', bio: 'Web platforms, BI tooling.', initials: 'M5', photo: 'dumie-kaiya.jpg' },
+    { name: 'Mzati Mchulu', role: 'Research & Evaluation Lead', bio: 'Mixed methods, policy analysis.', initials: 'M2', photo: 'mzati-mchulu2.jpg' },
 ];
 
 const TeamCard = ({ p, i }) => (
   <Reveal delay={i * 70} className="team__card">
     <div className="team__portrait">
-      <div className="team__portrait-inner" aria-label={`Photo placeholder for ${p.name}`}>
-        <span className="team__initials mono">{p.initials}</span>
-        <span className="team__portrait-label mono">PHOTO</span>
-      </div>
+      {p.photo ? (
+        <img
+          className="team__photo"
+          src={`/team/${p.photo}`}
+          alt={`Portrait of ${p.name}`}
+          loading="lazy"
+        />
+      ) : (
+        <div className="team__portrait-inner" aria-label={`Photo placeholder for ${p.name}`}>
+          <span className="team__initials mono">{p.initials}</span>
+          <span className="team__portrait-label mono">PHOTO</span>
+        </div>
+      )}
     </div>
     <div className="team__meta">
       <div className="team__name">{p.name}</div>
@@ -47,9 +57,7 @@ const Team = () => (
         {TEAM.map((p, i) => <TeamCard key={p.initials} p={p} i={i} />)}
       </div>
 
-      <div className="team__note mono">
-        — Portraits to be replaced with real team photography.
-      </div>
+      
     </div>
   </section>
 );

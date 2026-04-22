@@ -17,7 +17,7 @@ const Contact = () => (
       <div className="contact__grid">
         <div className="contact__block">
           <div className="mono contact__k">— GENERAL</div>
-          <a href="mailto:hello@apalis.io" className="contact__v">hello@apalis.io</a>
+          <a href="mailto:hello@apalis.io" className="contact__v">inquiries@apalis.io</a>
         </div>
         <div className="contact__block">
           <div className="mono contact__k">— CAREERS</div>
@@ -29,7 +29,7 @@ const Contact = () => (
         </div>
         <div className="contact__block">
           <div className="mono contact__k">— ALSO</div>
-          <div className="contact__v">United Kingdom · SSA</div>
+          <div className="contact__v">United Kingdom · RSA</div>
         </div>
       </div>
 

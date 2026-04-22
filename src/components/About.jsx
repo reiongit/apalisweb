@@ -40,8 +40,8 @@ const About = () => (
           <div className="about__facts">
             {[
               ['Founded', '2017'],
-              ['HQ', 'Blantyre, MW'],
-              ['Engagements', 'MW / UK / SSA'],
+              ['HQ', 'Lilongwe, MW'],
+              ['Engagements', 'MW / UK / RSA'],
               ['Sectors', 'Public & Private'],
             ].map(([k, v], i) => (
               <Reveal delay={480 + i * 80} key={k} className="fact">

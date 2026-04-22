@@ -77,7 +77,7 @@ a.contact__v:hover { color: var(--cream); text-decoration: underline; text-under
   align-items: center;
 }
 @media (min-width: 700px) {
-  .footer__inner { grid-template-columns: auto 1fr auto; gap: 48px; }
+  .footer__inner { grid-template-columns: auto 1fr auto auto; gap: 48px; }
 }
 .footer__brand {
   display: inline-flex;
@@ -97,6 +97,22 @@ a.contact__v:hover { color: var(--cream); text-decoration: underline; text-under
 }
 .footer__links a { opacity: .7; transition: opacity .2s var(--ease); }
 .footer__links a:hover { opacity: 1; }
+.footer__socials {
+  display: flex;
+  gap: 16px;
+  justify-self: end;
+}
+.footer__social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  opacity: .7;
+  transition: opacity .2s var(--ease);
+}
+.footer__social:hover { opacity: 1; }
+.footer__social svg { width: 18px; height: 18px; }
 .footer__meta {
   display: flex;
   gap: 10px;

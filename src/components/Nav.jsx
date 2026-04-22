@@ -25,8 +25,8 @@ const Nav = () => {
         <span className="nav__mark">
           <img src="/bird-logo.png" alt="" aria-hidden="true" width="32" height="32" style={{objectFit:'contain', mixBlendMode:'screen'}} />
         </span>
-        <span className="nav__word">Apalis</span>
-        <span className="nav__locale">MW</span>
+        {/* <span className="nav__word">Apalis</span> */}
+        {/* <span className="nav__locale">MW</span> */}
       </a>
 
       <ul className="nav__links">

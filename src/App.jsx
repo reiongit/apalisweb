@@ -6,6 +6,7 @@ import Mission from './components/Mission';
 import Impact from './components/Impact';
 import Team from './components/Team';
 import Careers from './components/Careers';
+import Blog, { BlogArticle } from './components/Blog';
 import Contact from './components/Contact';
 
 const App = () => (
@@ -19,8 +20,10 @@ const App = () => (
       <Impact />
       <Team />
       <Careers />
+      <Blog />
       <Contact />
     </main>
+    <BlogArticle />
   </>
 );
 

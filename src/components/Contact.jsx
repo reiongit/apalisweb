@@ -31,7 +31,7 @@ const Contact = () => (
   <section id="contact" className="section section--oxblood contact">
     <div className="section__inner">
       <div className="contact__head">
-        <Meta num="(08)" label="START A PROJECT" tone="cream" />
+        <Meta num="(09)" label="START A PROJECT" tone="cream" />
       </div>
 
       <h2 className="contact__title">

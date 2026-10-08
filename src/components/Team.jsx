@@ -2,12 +2,12 @@ import { Reveal, Meta } from './shared';
 
 // To add a photo: drop a JPG into public/team/ and set `photo` to its filename.
 const TEAM = [
-  { name: 'John Matekenya', role: 'Managing Director & Lead Data Scientist', bio: 'Platforms, data, cloud architecture.', initials: 'JP', photo: 'john-matekenya.jpg' },
-  { name: 'Nomsa Nungu', role: 'Research & Evaluation Lead', bio: 'Mixed methods, policy analysis.', initials: 'M2', photo: 'nomsa-nungu.png' },
-  { name: 'Reiwell Matekenya', role: 'Business Development Lead', bio: 'User research, product design.', initials: 'M3', photo: 'reiwell-matekenya.jpg' },
-  { name: 'Gracious Chadeleka', role: 'Sales & Marketing Officer', bio: 'Digital strategy, advocacy.', initials: 'M4', photo: 'gracious-chadeleka.jpg' },
-   { name: 'Dumisani Kaiya', role: 'Software Engineer', bio: 'Web platforms, BI tooling.', initials: 'M5', photo: 'dumie-kaiya.jpg' },
-    { name: 'Mzati Mchulu', role: 'Research & Evaluation Lead', bio: 'Mixed methods, policy analysis.', initials: 'M2', photo: 'mzati-mchulu2.jpg' },
+  { name: 'John Matekenya', role: 'Chief Executive Officer', bio: 'Sets vision and direction.', initials: 'JM', photo: 'john-matekenya.jpg' },
+  { name: 'Reiwell Matekenya', role: 'Chief Operations Officer', bio: 'Drives execution, growth and delivery.', initials: 'RM', photo: 'reiwell-matekenya.jpg' },
+  { name: 'Llostam Kaonga', role: 'Chief Technology Officer', bio: 'Leads the engineering team.', initials: 'LK', photo: 'llostam-kaonga.jpg' },
+  { name: 'Mzati Mchulu', role: 'Business Development Lead', bio: 'Builds partnerships, drives sales and opens new markets.', initials: 'MM', photo: 'mzati-mchulu.jpg' },
+  { name: 'Dumisani Kaiya', role: 'Full Stack Developer', bio: 'Builds and maintains the product across front and back end.', initials: 'DK', photo: 'dumie-kaiya.jpg' },
+  { name: 'Nomsa Faith Nungu', role: 'Research & Evaluation Lead', bio: 'Leads mixed-methods research and policy analysis.', initials: 'NN', photo: 'nomsa-nungu.png' },
 ];
 
 const TeamCard = ({ p, i }) => (

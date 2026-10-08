@@ -17,6 +17,7 @@ const Nav = () => {
     { label: 'Impact', href: '#impact' },
     { label: 'Team', href: '#team' },
     { label: 'Careers', href: '#careers' },
+    { label: 'Journal', href: '#blog' },
   ];
 
   return (

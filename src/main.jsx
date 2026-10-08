@@ -4,6 +4,7 @@ import './styles/base.css';
 import './styles/nav-hero.css';
 import './styles/sections-1.css';
 import './styles/sections-2.css';
+import './styles/blog.css';
 import './styles/contact-footer.css';
 import App from './App';
 

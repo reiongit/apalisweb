@@ -59,9 +59,6 @@ const Hero = () => {
       <div className="hero__cursor" aria-hidden="true" />
 
       <div className="hero__topbar">
-        <div className="hero__topbar-left">
-          <span className="pill pill--live"><span className="pill__dot" /> Open for 2026 engagements</span>
-        </div>
         <div className="hero__topbar-right">
           <span className="mono">Lilongwe, MW</span>
           <span className="mono">—</span>

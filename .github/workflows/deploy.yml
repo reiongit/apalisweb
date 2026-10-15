@@ -6,8 +6,8 @@
 #   FTP_PASSWORD   That FTP account's password
 # Optional repository variable:
 #   FTP_SERVER_DIR Folder to upload into, relative to the FTP login folder.
-#                  Defaults to public_html/ . Use ./ if the FTP account already
-#                  opens inside public_html.
+#                  Defaults to ./ because the apalis.io FTP account already opens
+#                  inside public_html.
 
 name: Deploy to apalis.io
 
@@ -57,6 +57,6 @@ jobs:
           # (425 Unable to build data connection), so upload over plain FTP.
           protocol: ftp
           local-dir: ./dist/
-          server-dir: ${{ vars.FTP_SERVER_DIR || 'public_html/' }}
+          server-dir: ${{ vars.FTP_SERVER_DIR || './' }}
           exclude: |
             **/.DS_Store

@@ -1,7 +1,7 @@
 # Build the site and upload it to Hostinger (apalis.io) on every push to main.
 #
 # Required repository secrets (GitHub → Settings → Secrets and variables → Actions):
-#   FTP_SERVER     Hostinger FTP host, e.g. ftp.apalis.io or the IP shown in hPanel
+#   FTP_SERVER     Hostinger FTP host (hPanel → apalis.io → Files → FTP Accounts)
 #   FTP_USERNAME   Hostinger FTP username, e.g. u123456789.apalis.io
 #   FTP_PASSWORD   That FTP account's password
 # Optional repository variable:
@@ -54,6 +54,8 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftps
+          # Hostinger's FTP host is an IP, so its TLS cert can't match the hostname.
+          security: loose
           local-dir: ./dist/
           server-dir: ${{ vars.FTP_SERVER_DIR || 'public_html/' }}
           exclude: |

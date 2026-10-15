@@ -53,9 +53,9 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
-          # Hostinger's FTP host is an IP, so its TLS cert can't match the hostname.
-          security: loose
+          # Hostinger's FTP server refuses FTPS data connections from this action
+          # (425 Unable to build data connection), so upload over plain FTP.
+          protocol: ftp
           local-dir: ./dist/
           server-dir: ${{ vars.FTP_SERVER_DIR || 'public_html/' }}
           exclude: |
